@@ -1,0 +1,111 @@
+﻿
+@model LoginViewModel
+
+@{
+    ViewBag.Title = "User Login";
+}
+
+<style>
+    .box {
+        background: #f9f9f9;
+        width: 400px;
+        border-radius: 2px;
+        margin: 0 auto 0 auto;
+        padding: 30px 30px 30px 30px;
+        border: #e6e6e6 1px solid;
+    }
+    .mbtn {
+        background: #35b3a2;
+        width: 125px;
+        padding: 8px;
+        color: white;
+        border-radius: 0px;
+        border: #27ae60 1px solid;
+        margin: 10px;
+        font-weight: 800;
+        font-size: 0.8em;
+    }
+        .mbtn:hover {
+            background: #35b3a2;
+        }
+    .mbtn2 {
+        background: transparent;
+        width: 225px;
+        color: #8d8d8d;
+        border-radius: 0px;
+        border: #27ae60 0px solid;
+        font-weight: 800;
+        font-size: 1.2em;
+    }
+        .mbtn2:hover {
+            color: black;
+        }  
+
+    .da {
+        color: #35b3a2;
+    }
+
+</style>
+    <div class="text-center">
+        <h3 class="display-4"><b>Alchemative</b></h3>
+        <br>
+    </div>
+
+<div @*class="row"*@  >
+    <div @*class="col-md-12"*@>
+        <form method="post">
+            <div class="box">
+                <h4>Sign In</h4>
+               
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Your Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label asp-for="RememberMe">
+                            <input asp-for="RememberMe" />
+                            @Html.DisplayNameFor(m => m.RememberMe)
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="mbtn">Continue</button>
+                <p >Don't Have An Account <a asp-controller="account" asp-action="register" class="da">Sign Up</a> Now</p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-center">
+
+    <p  >OR</p>
+    @{
+        if (Model.ExternalLogins.Count == 0)
+        {
+            <div>No external logins configured</div>
+        }
+        else
+        {
+            <form method="post" asp-action="ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl">
+                <div>
+                    @foreach (var provider in Model.ExternalLogins)
+                    {
+                    <button type="submit" class="mbtn2"
+                            name="provider" value="@provider.Name"
+                            title="Log in using your @provider.DisplayName account">
+                        Sign In With @provider.DisplayName
+                    </button>
+                    }
+                </div>
+            </form>
+        }
+    }
+</div>

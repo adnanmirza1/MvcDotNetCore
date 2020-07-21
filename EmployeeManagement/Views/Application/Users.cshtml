@@ -1,0 +1,79 @@
+﻿@model UsersViewModel
+
+@{
+    ViewBag.Title = "Users Settings";
+}
+
+<style>
+    body {
+        background-color: #fafafa;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        padding: 20px;
+        border-top: #e6e6e6 2px solid;
+        border-right: #e6e6e6 2px solid;
+        margin-top: 56px;
+    }
+
+        .sidenav a {
+            padding: 2px 0px 2px 0px;
+            text-decoration: none;
+            font-size: 15px;
+            color: black;
+            display: block;
+        }
+
+            .sidenav a.active {
+                /* Add a green color to the "active/current" link */
+                color: #35b3a2;
+            }
+
+            .sidenav a:hover {
+                color: #0094ff;
+            }
+
+    .main {
+        margin-left: 100px; /* Same as the width of the sidenav */
+    }
+
+    .us {
+        margin-left: 800px;
+        margin-top: 3px;
+    }
+
+    .ad {
+        padding: 5px 15px 5px 15px;
+        color: #35b3a2;
+        border: 1px solid #35b3a2;
+    }
+</style>
+
+
+
+
+<div class="sidenav">
+    <p>User Management</p>
+    <hr>
+    <a class="active">Users</a>
+    <a asp-controller="application" asp-action="settings">Settings</a>
+</div>
+
+<div class="main">
+    <div class="">
+        <h3>Users</h3>
+        <p class="">
+            User Management is under construction
+        </p>
+    </div>
+    <hr>
+    
+</div>

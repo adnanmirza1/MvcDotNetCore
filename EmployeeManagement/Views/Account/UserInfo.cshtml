@@ -1,0 +1,63 @@
+﻿@model UserInfoViewModel
+
+@{
+    ViewBag.Title = "Basic User Info";
+}@{
+}
+<div class="text-center">
+    <h3 class="display-4"><b>Alchemative</b></h3>
+    <br>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div class="box">
+                <h4>Basic Info</h4>
+                <hr />
+                <div class="form-group">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" class="form-control" placeholder="First Name" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" class="form-control" placeholder="Last Name" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhoneNo"></label>
+                    <input asp-for="PhoneNo" class="form-control" placeholder="Phone Number" />
+                    <span asp-validation-for="PhoneNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Gender"></label>
+                    <input asp-for="Gender" class="form-control" placeholder="Gender" />
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DateOfBirth"></label>
+                    <input asp-for="DateOfBirth" class="form-control" placeholder="Date Of Birth" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Province"></label>
+                    <input asp-for="Province" class="form-control" placeholder="Province" />
+                    <span asp-validation-for="Province" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="City"></label>
+                    <input asp-for="City" class="form-control" placeholder="City" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address"></label>
+                    <input asp-for="Address" class="form-control" placeholder="Address" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="mbtn">Continue</button>
+            </div>
+        </form>
+    </div>
+</div>

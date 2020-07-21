@@ -1,0 +1,217 @@
+﻿@model SettingsViewModel
+
+@{
+    ViewBag.Title = "Aplication Settings";
+}
+<style>
+    bpdy {
+        background-color: #fafafa;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        padding: 20px;
+        border-top: #e6e6e6 2px solid;
+        border-right: #e6e6e6 2px solid;
+        margin-top: 56px;
+    }
+
+        .sidenav a {
+            padding: 2px 0px 2px 0px;
+            text-decoration: none;
+            font-size: 15px;
+            color: black;
+            display: block;
+        }
+
+            .sidenav a.active {
+                 /* Add a green color to the "active/current" link */
+                color: #35b3a2;
+            }
+
+            .sidenav a:hover {
+                color: #0094ff;
+            }
+
+    .main {
+        margin-left: 100px; /* Same as the width of the sidenav */
+    }
+
+    .box4 {
+        background: #ffffff;
+        width: 630px;
+        border-radius: 2px;
+        border: #e6e6e6 1px solid;
+    }
+
+
+    .switch {
+        position: absolute;
+        display: inline-block;
+        width: 30px;
+        height: 14px;
+        right: 520px;
+    }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 0px;
+            bottom: 0px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+
+    input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+    .gene {
+        color: #35b3a2;
+        border-bottom: #35b3a2 3px solid;
+        padding: 10px;
+    }
+
+    .domain {
+        padding-left: 30px;
+    }
+
+    .gr {
+        padding-left: 10px;
+        font-size: 0.8em;
+        color: #b9b9b9;
+    }
+
+    .br {
+        margin-left: 10px;
+        border: 1px solid #b9b9b9;
+    }
+
+    #b1 {
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+
+    .pp {
+        padding-left: 10px;
+        font-size: 0.8em;
+        color: #b9b9b9
+    }
+
+    .pol {
+        padding-left: 10px;
+        font-size: 0.8em;
+    }
+
+    .d2 {
+        padding-left: 10px;
+    }
+</style>
+
+<div class="sidenav">
+    <p>User Management</p>
+    <hr>
+    <a  asp-controller="application" asp-action="users"  >Users</a>
+    <a class="active" >Settings</a>
+</div>
+
+<div class="main">
+    <h3>Settings</h3>
+    <hr>
+    <div class="box4">
+        <p class="gene">General</p>
+
+        <div class="row">
+            <p class="domain">Domain Restriction</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <p class="gr">
+            You can add one or more Domain with comma sepration.<br />
+            For example abc.com, xyz.com<br />
+            You can send this Link to your team to Invite them <b>http://join.expedite.com/alchemative/sign-up</b>
+        </p>
+
+        <input class="br" type="text" name="domain" value="" placeholder="Add Domain" />
+        <br />
+        <div id="b1" class="row">
+            <input type="checkbox" />
+            <p class="pp">Apply Restrictions on current users</p>
+        </div>
+        <hr />
+        <p class="d2">Password Policy</p>
+        <p class="pol">
+            Password Policy is a set of rules that define the type of password a user can set.<br />
+            <a href="#">Review Password Restrictions</a>
+        </p>
+        <hr />
+        <div style="" class="row">
+            <p class="domain">Two-Factor Authentication</p>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <p class="gr">
+            Two factor authentication improves the security of your account. In addition to your normal
+            credentials you will all need to provide an authentication code when logging in.
+        </p>
+        <div class="d2">
+            <input type="radio" id="userselected" name="select" value="userselected">
+            <label class="gr" for="userselected">User Selected</label>
+            <input type="radio" id="mandatory" name="select" value="mandatory">
+            <label class="gr" for="mandatory">Mandatory</label>
+        </div>
+
+    </div>
+    <br /><br />
+</div>

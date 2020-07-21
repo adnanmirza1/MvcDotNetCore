@@ -1,0 +1,5 @@
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement.DataAccess\bin\Debug\netstandard2.0\EmployeeManagement.DataAccess.deps.json
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement.DataAccess\bin\Debug\netstandard2.0\EmployeeManagement.DataAccess.dll
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement.DataAccess\obj\Debug\netstandard2.0\EmployeeManagement.DataAccess.csprojAssemblyReference.cache
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement.DataAccess\obj\Debug\netstandard2.0\EmployeeManagement.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement.DataAccess\obj\Debug\netstandard2.0\EmployeeManagement.DataAccess.AssemblyInfo.cs
