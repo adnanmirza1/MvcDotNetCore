@@ -1,3 +1,4 @@
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\nlog.config
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\libman.json
@@ -10,6 +11,8 @@ C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManag
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.pdb
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.Views.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\EmployeeManagement.Views.pdb
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\DnsClient.dll
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\MailKit.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -36,6 +39,12 @@ C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManag
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\NServiceBus.Core.dll
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
@@ -49,7 +58,6 @@ C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManag
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csprojAssemblyReference.cache
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.AssemblyInfoInputs.cache
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.AssemblyInfo.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csproj.CoreCompileInputs.cache
@@ -59,8 +67,13 @@ C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManag
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.TagHelpers.input.cache
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.TagHelpers.output.cache
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.RazorCoreGenerate.cache
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\ConfirmEmail.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\ForgotPassword.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\ForgotPasswordConfirmation.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPassword.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\ResetPasswordConfirmation.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\UserInfo.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\CreateRole.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\EditRole.cshtml.g.cs

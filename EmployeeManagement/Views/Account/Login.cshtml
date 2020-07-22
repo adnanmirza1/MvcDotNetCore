@@ -56,7 +56,7 @@
         <form method="post">
             <div class="box">
                 <h4>Sign In</h4>
-               
+
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Email"></label>
@@ -76,9 +76,12 @@
                         </label>
                     </div>
                 </div>
+                <div>
+                    <a asp-action="ForgotPassword">Forgot Password?</a>
+                </div>
 
                 <button type="submit" class="mbtn">Continue</button>
-                <p >Don't Have An Account <a asp-controller="account" asp-action="register" class="da">Sign Up</a> Now</p>
+                <p>Don't Have An Account <a asp-controller="account" asp-action="register" class="da">Sign Up</a> Now</p>
             </div>
         </form>
     </div>

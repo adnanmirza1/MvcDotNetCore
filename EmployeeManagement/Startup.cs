@@ -33,17 +33,24 @@ namespace EmployeeManagement
             services.AddMvc(option => option.EnableEndpointRouting = false).AddXmlSerializerFormatters();
             services.AddScoped<IEmployeeRepository, SQLEmployeeRepository>();
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
-            .AddEntityFrameworkStores<AppDbContext>();
+            //services.AddIdentity<IdentityUser, IdentityRole>()
+            //.AddEntityFrameworkStores<AppDbContext>();
 
-            
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedEmail = true;
+            })
+             .AddEntityFrameworkStores<AppDbContext>()
+             .AddDefaultTokenProviders();
+
+           // services.Configure<DataProtectionTokenProviderOptions>(o => o.TokenLifespan = TimeSpan.FromHours(5));
+
 
             services.AddAuthentication().AddGoogle(options =>
             {
                 options.ClientId = "535423421738-l43oim83s2akp8hua1fuq245hp2uhj8j.apps.googleusercontent.com";
                 options.ClientSecret = "jH7_hwmmtfzaU3McUFk5Qrju";
             });
-
             
         }
 
