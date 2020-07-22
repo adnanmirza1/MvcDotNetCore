@@ -16,14 +16,20 @@ namespace EmployeeManagement.Models
                         Id = 1,
                         Name = "Mary",
                         Department = Dept.IT,
-                        Email = "mary@pragimtech.com"
+                        Email = "mary@pragimtech.com",
+                        InvitedOn = DateTime.Parse("1989-1-11"),
+                        LastActive = DateTime.Parse("1989-1-11"),
+                        Status = "Active"
                     },
                     new Employee
                     {
                         Id = 2,
                         Name = "John",
                         Department = Dept.HR,
-                        Email = "john@pragimtech.com"
+                        Email = "john@pragimtech.com",
+                        InvitedOn = DateTime.Parse("1989-1-11"),
+                        LastActive = DateTime.Parse("1989-1-11"),
+                        Status = "Active"
                     }
                 );
         }

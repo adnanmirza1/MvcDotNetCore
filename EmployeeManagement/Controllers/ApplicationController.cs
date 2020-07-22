@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmployeeManagement.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,13 @@ namespace EmployeeManagement.Controllers
 {
     public class ApplicationController : Controller
     {
+        private IEmployeeRepository _employeeRepository;
+
+        public ApplicationController(IEmployeeRepository employeeRepository)
+        {
+            _employeeRepository = employeeRepository;
+        }
+
         [Authorize]
         public IActionResult Management()
         {
@@ -22,7 +30,11 @@ namespace EmployeeManagement.Controllers
         [Authorize]
         public IActionResult Users()
         {
-            return View();
+            // retrieve all the employees
+            var model = _employeeRepository.GetAllEmployees();
+            // Pass the list of employees to the view
+             return View(model);
+            
         }
     }
 }

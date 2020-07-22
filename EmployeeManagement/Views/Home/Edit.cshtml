@@ -6,72 +6,186 @@
     //var photoPath = "~/images/" + (Model.ExistingPhotoPath ?? "noimage.jpg");
 }
 
-<form asp-controller="home" asp-action="edit" enctype="multipart/form-data" method="post" class="mt-3">
-    <div asp-validation-summary="All" class="text-danger">
-    </div>
-    @*Use hidden input elements to store employee id and ExistingPhotoPath
-        which we need when we submit the form and update data in the database*@
-    <input hidden asp-for="Id" />
-    @*<input hidden asp-for="ExistingPhotoPath" />*@
-
-    @*Bind to the properties of the EmployeeEditViewModel. The asp-for tag helper
-        takes care of displaying the existing data in the respective input elements*@
-    <div class="form-group row">
-        <label asp-for="Name" class="col-sm-2 col-form-label"></label>
-        <div class="col-sm-10">
-            <input asp-for="Name" class="form-control" placeholder="Name">
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label asp-for="Email" class="col-sm-2 col-form-label"></label>
-        <div class="col-sm-10">
-            <input asp-for="Email" class="form-control" placeholder="Email">
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-    </div>
-
-    <div class="form-group row">
-        <label asp-for="Department" class="col-sm-2 col-form-label"></label>
-        <div class="col-sm-10">
-            <select asp-for="Department" class="custom-select mr-sm-2"
-                    asp-items="Html.GetEnumSelectList<Dept>()">
-                <option value="">Please Select</option>
-            </select>
-            <span asp-validation-for="Department" class="text-danger"></span>
-        </div>
-    </div>
-
-    @*<div class="form-group row">
-        <label asp-for="Photo" class="col-sm-2 col-form-label"></label>
-        <div class="col-sm-10">
-            <div class="custom-file">
-                <input asp-for="Photo" class="custom-file-input form-control">
-                <label class="custom-file-label">Click here to change photo</label>
-            </div>
-        </div>
-    </div>*@
-
-    @*Display the existing employee photo*@
-    @*<div class="form-group row col-sm-4 offset-4">
-        <img class="imageThumbnail" src="@photoPath" asp-append-version="true" />
-    </div>*@
-
-    <div class="form-group row">
-        <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Update</button>
-            <a asp-action="index" asp-controller="home" class="btn btn-primary">Cancel</a>
-        </div>
-    </div>
-
-    @section Scripts {
-        <script>
-            $(document).ready(function () {
-                $('.custom-file-input').on("change", function () {
-                    var fileName = $(this).val().split("\\").pop();
-                    $(this).next('.custom-file-label').html(fileName);
-                });
-            });
-        </script>
+<style>
+    body {
+        background-color: #fafafa;
     }
-</form>
+
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        padding: 20px;
+        border-top: #e6e6e6 2px solid;
+        border-right: #e6e6e6 2px solid;
+        margin-top: 56px;
+    }
+
+        .sidenav a {
+            padding: 2px 0px 2px 0px;
+            text-decoration: none;
+            font-size: 15px;
+            color: black;
+            display: block;
+        }
+
+            .sidenav a.active {
+                /* Add a green color to the "active/current" link */
+                color: #35b3a2;
+            }
+
+            .sidenav a:hover {
+                color: #0094ff;
+            }
+
+    .main {
+        margin-left: 100px; /* Same as the width of the sidenav */
+    }
+
+    .us {
+        margin-left: 800px;
+        margin-top: 10px;
+    }
+
+    .ad {
+        padding: 5px 15px 5px 15px;
+        color: #35b3a2;
+        border: 1px solid #35b3a2;
+    }
+
+    .box4 {
+        background: #ffffff;
+        width: 800px;
+        padding: 20px;
+        border-radius: 2px;
+        border: #e6e6e6 1px solid;
+    }
+
+    .gene {
+        color: #35b3a2;
+        border-bottom: #35b3a2 3px solid;
+        padding: 10px;
+    }
+</style>
+
+
+
+
+<div class="sidenav">
+    <p>User Management</p>
+    <hr>
+    <a class="active">Users</a>
+    <a asp-controller="application" asp-action="settings">Settings</a>
+</div>
+
+
+<div class="main">
+
+    <div class="row">
+        <h3>Users</h3>
+        <p class="us">
+            <a asp-controller="application" asp-action="users" class="ad">Cancel</a>
+        </p>
+    </div>
+    <hr />
+
+
+    <form asp-controller="home" asp-action="edit" enctype="multipart/form-data" method="post" class="mt-3">
+        <div class="box4">
+            <p class="gene">Edit User</p>
+            <div asp-validation-summary="All" class="text-danger">
+            </div>
+            @*Use hidden input elements to store employee id and ExistingPhotoPath
+            which we need when we submit the form and update data in the database*@
+            <input hidden asp-for="Id" />
+            @*<input hidden asp-for="ExistingPhotoPath" />*@
+
+            @*Bind to the properties of the EmployeeEditViewModel. The asp-for tag helper
+            takes care of displaying the existing data in the respective input elements*@
+            <div class="form-group row">
+                <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Name" class="form-control" placeholder="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Email" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Email" class="form-control" placeholder="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label asp-for="Department" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <select asp-for="Department" class="custom-select mr-sm-2"
+                            asp-items="Html.GetEnumSelectList<Dept>()">
+                        <option value="">Please Select</option>
+                    </select>
+                    <span asp-validation-for="Department" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="InvitedOn" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="InvitedOn" class="form-control">
+                    <span asp-validation-for="InvitedOn" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="LastActive" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="LastActive" class="form-control">
+                    <span asp-validation-for="LastActive" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Status" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Status" class="form-control" placeholder="Status">
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </div>
+            </div>
+
+            @*<div class="form-group row">
+                <label asp-for="Photo" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <div class="custom-file">
+                        <input asp-for="Photo" class="custom-file-input form-control">
+                        <label class="custom-file-label">Click here to change photo</label>
+                    </div>
+                </div>
+            </div>*@
+
+            @*Display the existing employee photo*@
+            @*<div class="form-group row col-sm-4 offset-4">
+                <img class="imageThumbnail" src="@photoPath" asp-append-version="true" />
+            </div>*@
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="mbtn">Update</button>
+                    
+                </div>
+            </div>
+
+            @section Scripts {
+                <script>
+                    $(document).ready(function () {
+                        $('.custom-file-input').on("change", function () {
+                            var fileName = $(this).val().split("\\").pop();
+                            $(this).next('.custom-file-label').html(fileName);
+                        });
+                    });
+                </script>
+            }
+        </div>
+    </form>
+</div>

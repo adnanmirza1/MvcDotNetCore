@@ -9,6 +9,10 @@ namespace EmployeeManagement.Models
     public enum Dept
     {
         None,
+        Multiple,
+        Agent,
+        Developer,
+        User,
         HR,
         Payroll,
         IT

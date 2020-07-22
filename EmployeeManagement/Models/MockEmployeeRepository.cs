@@ -13,7 +13,7 @@ namespace EmployeeManagement.Models
         {
             _employeeList = new List<Employee>()
             {
-                new Employee() { Id = 1, Name = "Mary", Department = Dept.HR, Email = "mary@pragimtech.com" },
+                new Employee() { Id = 1, Name = "Mary", Department = Dept.HR, Email = "mary@pragimtech.com", },
                 new Employee() { Id = 2, Name = "John", Department = Dept.IT, Email = "john@pragimtech.com" },
                 new Employee() { Id = 3, Name = "Sam", Department = Dept.Payroll, Email = "sam@pragimtech.com" },
             };
@@ -53,6 +53,9 @@ namespace EmployeeManagement.Models
                 employee.Name = employeeChanges.Name;
                 employee.Email = employeeChanges.Email;
                 employee.Department = employeeChanges.Department;
+                employee.InvitedOn = employeeChanges.InvitedOn;
+                employee.LastActive = employeeChanges.LastActive;
+                employee.Status = employeeChanges.Status;
             }
             return employee;
         }

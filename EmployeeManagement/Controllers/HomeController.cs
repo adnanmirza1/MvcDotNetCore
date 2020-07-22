@@ -20,9 +20,10 @@ namespace EmployeeManagement.Controllers
         public ViewResult Index()
         {
             // retrieve all the employees
-            var model = _employeeRepository.GetAllEmployees();
+            //var model = _employeeRepository.GetAllEmployees();
             // Pass the list of employees to the view
-            return View(model);
+            // return View(model);
+            return View();
         }
        
         public ViewResult Details(int? id)

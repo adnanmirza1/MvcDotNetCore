@@ -1,4 +1,5 @@
-﻿@model UsersViewModel
+﻿@model IEnumerable<Employee>
+
 
 @{
     ViewBag.Title = "Users Settings";
@@ -47,7 +48,7 @@
 
     .us {
         margin-left: 800px;
-        margin-top: 3px;
+        margin-top: 10px;
     }
 
     .ad {
@@ -68,12 +69,98 @@
 </div>
 
 <div class="main">
-    <div class="">
-        <h3>Users</h3>
-        <p class="">
-            User Management is under construction
-        </p>
-    </div>
-    <hr>
     
+        <div class="row">
+            <h3>Users</h3>
+            <p class="us">
+                <a asp-controller="home" asp-action="create" class="ad">Add User</a>
+            </p>
+        </div>
+        <hr />
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        User ID
+                    </th>
+                    <th>
+                        Role
+                    </th>
+                    <th>
+                        InvitedOn
+                    </th>
+                    <th>
+                        LastActive
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Employee in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => Employee.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => Employee.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => Employee.Department)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => Employee.InvitedOn)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => Employee.LastActive)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => Employee.Status)
+                        </td>
+                        <td>
+                            <a asp-controller="home" asp-action="details" asp-route-id="@Employee.Id">view</a>
+                            <a asp-controller="home" asp-action="edit" asp-route-id="@Employee.Id">edit</a>
+                            <a href="#">delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+        @*<div class="card-deck">
+            @foreach (var employee in Model)
+            {
+                <div class="card m-3">
+                    <div class="card-header">
+                        <h3>@employee.Name</h3>
+                    </div>
+                    <img class="card-img-top" src="~/images/a.jpg" asp-append-version="true" />
+
+
+                    <div class="card-footer text-center">
+
+                        <a asp-controller="home" asp-action="details"
+                           asp-route-id="@employee.Id" class="btn btn-primary m-1">view</a>
+
+                        <a asp-controller="home" asp-action="edit" asp-route-id="@employee.Id"
+                           class="btn btn-primary m-1">edit</a>
+
+
+                        <a href="#" class="btn btn-danger m-1">delete</a>
+                    </div>
+                </div>
+            }
+        </div>*@
+
+  
+    <hr>
+
 </div>
+
