@@ -58,7 +58,6 @@ C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManag
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csprojAssemblyReference.cache
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.AssemblyInfoInputs.cache
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.AssemblyInfo.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csproj.CoreCompileInputs.cache
@@ -78,12 +77,17 @@ C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManag
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\UserInfo.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\CreateRole.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\EditRole.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\EditUser.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\EditUsersInRole.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ListRoles.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ListUsers.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ManageUserRoles.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\NotFound.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Application\Management.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Application\NotFound.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Application\Settings.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Application\Users.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Error\Error.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Create.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Home\Edit.cshtml.g.cs
@@ -102,8 +106,5 @@ C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManag
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.dll
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.pdb
 C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.genruntimeconfig.cache
-C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ListUsers.cshtml.g.cs
-C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\EditUser.cshtml.g.cs
-C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Error\Error.cshtml.g.cs
-C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Administration\ManageUserRoles.cshtml.g.cs
-C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Application\NotFound.cshtml.g.cs
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\EmployeeManagement.csprojAssemblyReference.cache
+C:\Users\ALI COMPUTER CENTER\Desktop\MyProjects\EmployeeManagement\EmployeeManagement\obj\Debug\netcoreapp3.1\Razor\Views\Account\NotFound.cshtml.g.cs

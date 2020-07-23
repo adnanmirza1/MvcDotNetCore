@@ -3,65 +3,67 @@
 @{
     ViewBag.Title = "Aplication Management";
 }
-    <style>
-        body {
-            background-color: #fafafa;
-        }
-        .box3 {
-            background: #ffffff;
-            width: 310px;
-            height: 220px;
-            border-radius: 2px;
-            border: #e6e6e6 1px solid;
-        }
-        .sidenav {
-            height: 100%;
-            width: 200px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #ffffff;
-            overflow-x: hidden;
-            padding: 20px;
-            border-top: #e6e6e6 2px solid;
-            border-right: #e6e6e6 2px solid;
-            margin-top: 56px;
+<style>
+    body {
+        background-color: #fafafa;
+    }
+
+    .box3 {
+        background: #ffffff;
+        width: 310px;
+        height: 220px;
+        border-radius: 2px;
+        border: #e6e6e6 1px solid;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        overflow-x: hidden;
+        padding: 20px;
+        border-top: #e6e6e6 2px solid;
+        border-right: #e6e6e6 2px solid;
+        margin-top: 56px;
+    }
+
+        .sidenav a {
+            padding: 2px 0px 2px 0px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #35b3a2;
+            display: block;
         }
 
-            .sidenav a {
-                padding: 2px 0px 2px 0px;
-                text-decoration: none;
-                font-size: 15px;
-                color: #35b3a2;
-                display: block;
+            .sidenav a:hover {
+                color: #0094ff;
             }
 
-                .sidenav a:hover {
-                    color: #0094ff;
-                }
+    .main {
+        margin-left: 100px; /* Same as the width of the sidenav */
+    }
+</style>
 
-        .main {
-            margin-left: 100px; /* Same as the width of the sidenav */
-        }
-    </style>
+<div class="sidenav">
+    <p>Pinned Apps</p>
+    <hr>
+    <a>User Management</a>
+    <a>User Management</a>
+    <a>User Management</a>
+    <a>User Management</a>
 
-    <div class="sidenav">
-        <p>Pinned Apps</p>
-        <hr>
-        <a>User Management</a>
-        <a>User Management</a>
-        <a>User Management</a>
-        <a>User Management</a>
-
-        <br>
-        <p>Recent Apps</p>
-        <hr>
-        <a>User Management</a>
-        <a>User Management</a>
-        <a>User Management</a>
-        <a>User Management</a>
-    </div>
+    <br>
+    <p>Recent Apps</p>
+    <hr>
+    <a>User Management</a>
+    <a>User Management</a>
+    <a>User Management</a>
+    <a>User Management</a>
+</div>
 
 <div class="main">
     <h3>Applications</h3>
@@ -69,7 +71,7 @@
     <div class="box3">
         <div style="background-color: #f9f9f9;"><p style="padding: 10px;">System Settings</p></div>
         <div style="padding-left: 10px; font-size: 0.8em;">
-            <a asp-controller="application" asp-action="users"><p>User Management</p></a>
+            <a asp-controller="administration" asp-action="ListUsers"><p>User Management</p></a>
             <p>Communication</p>
         </div>
     </div>

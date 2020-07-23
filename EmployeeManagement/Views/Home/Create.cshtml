@@ -76,7 +76,8 @@
 <div class="sidenav">
     <p>User Management</p>
     <hr>
-    <a class="active">Users</a>
+    <a asp-controller="administration" asp-action="ListUsers">Users</a>
+    <a class="active" asp-controller="application" asp-action="users">Emloyees</a>
     <a asp-controller="application" asp-action="settings">Settings</a>
 </div>
 

@@ -1,7 +1,4 @@
-﻿
-@inject SignInManager<IdentityUser> signInManager
-
-
+﻿@inject SignInManager<IdentityUser> signInManager
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -26,8 +23,6 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-
-
     <nav style=" background-color: #35b3a2" class="navbar navbar-expand-sm">
         <a class="navbar-brand" asp-controller="home" asp-action="index">
             <img src="~/images/employees.png" width="30" height="30">
@@ -41,27 +36,27 @@
                     <a style="color: white;" class="nav-link" asp-controller="home" asp-action="index"><b>Alchematic</b></a>
                 </li>
                 @*<li class="nav-item">
-            <a style="color: white;" class="nav-link" asp-controller="home" asp-action="create">Create</a>
-        </li>*@
+                     <a style="color: white;" class="nav-link" asp-controller="home" asp-action="create">Create</a>
+                </li>*@
                 <li class="nav-item">
                     <a style="color: white;" class="nav-link" asp-controller="application" asp-action="management">Applications</a>
                 </li>
 
 
                 @*@if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
-                {*@
-                    @*<li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Manage
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" asp-controller="Administration"
-                               asp-action="ListUsers">Users</a>
-                            <a class="dropdown-item" asp-controller="Administration"
-                               asp-action="ListRoles">Roles</a>
-                        </div>
-                    </li>*@
+        {*@
+                @*<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Manage
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" asp-controller="Administration"
+                   asp-action="ListUsers">Users</a>
+                <a class="dropdown-item" asp-controller="Administration"
+                   asp-action="ListRoles">Roles</a>
+            </div>
+        </li>*@
                 @*}*@
 
 
@@ -70,14 +65,14 @@
                 @*If the user is signed-in display Logout link*@
                 @if (signInManager.IsSignedIn(User))
                 {
-                    <li class="nav-item">
-                        <form method="post" asp-controller="account" asp-action="logout">
-                            <button type="submit" style=" color: white; width:auto"
-                                    class="nav-link btn btn-link py-0">
-                                Logout @User.Identity.Name
-                            </button>
-                        </form>
-                    </li>
+                <li class="nav-item">
+                    <form method="post" asp-controller="account" asp-action="logout">
+                        <button type="submit" style=" color: white; width:auto"
+                                class="nav-link btn btn-link py-0">
+                            Logout @User.Identity.Name
+                        </button>
+                    </form>
+                </li>
                 }
                 else
                 {
@@ -96,15 +91,14 @@
         </div>
     </nav>
     <div class="container">
-        <div>
+        <main>
             @RenderBody()
-        </div>
-
-        @if (IsSectionDefined("Scripts"))
-        {
-            @RenderSection("Scripts", required: false)
-        }
+        </main>
     </div>
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts", required: false)
+    }
 
 </body>
 </html>

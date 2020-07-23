@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagement.Controllers
 {
-   // [Authorize]
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -17,12 +17,8 @@ namespace EmployeeManagement.Controllers
         {
             _employeeRepository = employeeRepository;
         }
-        public ViewResult Index()
+        public IActionResult Index()
         {
-            // retrieve all the employees
-            //var model = _employeeRepository.GetAllEmployees();
-            // Pass the list of employees to the view
-            // return View(model);
             return View();
         }
        
@@ -37,7 +33,6 @@ namespace EmployeeManagement.Controllers
             return View(homeDetailsViewModel);
         }
         [HttpGet]
-        [Authorize]
         public ViewResult Create()
         {
             return View();
@@ -54,7 +49,6 @@ namespace EmployeeManagement.Controllers
             return View();
         }
         [HttpGet]
-        [Authorize]
         public ViewResult Edit(int id)
         {
             Employee employee = _employeeRepository.GetEmployee(id);

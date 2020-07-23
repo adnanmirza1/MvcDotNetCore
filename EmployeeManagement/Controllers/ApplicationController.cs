@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.Controllers
 {
+    [Authorize]
     public class ApplicationController : Controller
     {
         private IEmployeeRepository _employeeRepository;
@@ -20,17 +21,14 @@ namespace EmployeeManagement.Controllers
             this.userManager = userManager;
         }
 
-        [Authorize]
         public IActionResult Management()
         {
             return View();
         }
-        [Authorize]
         public IActionResult Settings()
         {
             return View();
         }
-        [Authorize]
         public IActionResult Users()
         {
             // retrieve all the employees
@@ -40,7 +38,6 @@ namespace EmployeeManagement.Controllers
             
         }
 
-        [Authorize]
         [HttpPost]
         public async Task<IActionResult> DeleteUser2(string id)
         {

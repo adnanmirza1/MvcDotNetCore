@@ -252,7 +252,8 @@ namespace EmployeeManagement.Controllers
                     UserName = model.Email,
                     Email = model.Email
                 };
-
+                //var ExistingDomains = ""; //Db fetch domains
+                //var domain = user.Email.Split("@");
                 // Store user data in AspNetUsers database table
                 var result = await userManager.CreateAsync(user, model.Password);
 
@@ -269,14 +270,14 @@ namespace EmployeeManagement.Controllers
                     logger.Log(LogLevel.Warning, confirmationLink);
                     //
 
-                    await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("index", "home");
+                    //await signInManager.SignInAsync(user, isPersistent: false);
+                    //return RedirectToAction("index", "home");
 
 
-                    //ViewBag.ErrorTitle = "Registration successful";
-                    //ViewBag.ErrorMessage = "Before you can Login, please confirm your " +
-                    //        "email, by clicking on the confirmation link we have emailed you";
-                    //return View("NotFound");
+                    ViewBag.ErrorTitle = "Registration successful";
+                    ViewBag.ErrorMessage = "Before you can Login, please confirm your " +
+                            "email, by clicking on the confirmation link we have emailed you";
+                    return View("NotFound");
                 }
 
                 // If there are any errors, add them to the ModelState object

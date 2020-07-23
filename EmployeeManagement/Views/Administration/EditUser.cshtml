@@ -56,33 +56,11 @@
         </div>
         <div class="card-footer">
             <a asp-action="ManageUserRoles" asp-route-userId="@Model.Id"
-               class="btn btn-primary" style="width: 200px;">
+               class="mbtn" style="width: 200px;">
                 Manage Roles
             </a>
         </div>
     </div>
 
-    <div class="card mt-3">
-        <div class="card-header">
-            <h3>User Claims</h3>
-        </div>
-        <div class="card-body">
-            @if (Model.Claims.Any())
-            {
-                foreach (var claim in Model.Claims)
-                {
-                    <h5 class="card-title">@claim</h5>
-                }
-            }
-            else
-            {
-                <h5 class="card-title">None at the moment</h5>
-            }
-        </div>
-        <div class="card-footer">
-            <a href="#" style="width:auto" class="btn btn-primary">
-                Manage Claims
-            </a>
-        </div>
-    </div>
+   
 </form>
