@@ -41,11 +41,30 @@
                     <a style="color: white;" class="nav-link" asp-controller="home" asp-action="index"><b>Alchematic</b></a>
                 </li>
                 @*<li class="nav-item">
-                    <a style="color: white;" class="nav-link" asp-controller="home" asp-action="create">Create</a>
-                </li>*@
+            <a style="color: white;" class="nav-link" asp-controller="home" asp-action="create">Create</a>
+        </li>*@
                 <li class="nav-item">
                     <a style="color: white;" class="nav-link" asp-controller="application" asp-action="management">Applications</a>
                 </li>
+
+
+                @*@if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+                {*@
+                    @*<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Manage
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" asp-controller="Administration"
+                               asp-action="ListUsers">Users</a>
+                            <a class="dropdown-item" asp-controller="Administration"
+                               asp-action="ListRoles">Roles</a>
+                        </div>
+                    </li>*@
+                @*}*@
+
+
             </ul>
             <ul class="navbar-nav ml-auto">
                 @*If the user is signed-in display Logout link*@

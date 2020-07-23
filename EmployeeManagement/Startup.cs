@@ -61,10 +61,11 @@ namespace EmployeeManagement
             {
                 app.UseDeveloperExceptionPage();
             }
-            //else
-            //{
-            //    app.UseStatusCodePagesWithRedirects("/Error/{0}");
-            //}
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+            }
 
 
             //app.UseDefaultFiles();

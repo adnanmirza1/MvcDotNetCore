@@ -126,7 +126,14 @@
                         <td>
                             <a asp-controller="home" asp-action="details" asp-route-id="@Employee.Id">view</a>
                             <a asp-controller="home" asp-action="edit" asp-route-id="@Employee.Id">edit</a>
-                            <a href="#">delete</a>
+                            <a href="#" >delete</a>
+                            
+                            @*<form method="post" asp-controller="application" asp-action="DeleteUser2" asp-route-id="@Employee.Id">
+                                <button type="submit" class="btn btn-danger"
+                                        onclick="return confirm('Are you sure you want to delete user : @Employee.Name')">
+                                    Delete
+                                </button>
+                            </form>*@
                         </td>
                     </tr>
                 }
