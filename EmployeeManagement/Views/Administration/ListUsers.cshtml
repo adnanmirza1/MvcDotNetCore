@@ -91,7 +91,7 @@
                     <th>
                         User ID
                     </th>
-                    
+
                     <th></th>
                 </tr>
             </thead>
@@ -99,7 +99,7 @@
 
                 @foreach (var user in Model)
                 {
-                    <tr>                  
+                    <tr>
                         <td>
                             @user.UserName
                         </td>
@@ -108,7 +108,7 @@
                         </td>
                         <td>
                             <a asp-action="EditUser" asp-controller="Administration"
-                               asp-route-id="@user.Id" >Edit</a>
+                               asp-route-id="@user.Id">Edit</a>
                         </td>
                         <td>
                             <form method="post" asp-action="DeleteUser" asp-route-id="@user.Id">
@@ -143,4 +143,5 @@
             </div>
         </div>
     }
-    </div>
+    <a asp-action="ListRoles" asp-controller="Administration" class="ad" style="width:auto">List Roles </a>
+</div>

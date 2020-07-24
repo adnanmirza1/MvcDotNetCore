@@ -10,6 +10,9 @@ using System.Security.Claims;
 using EmployeeManagement.Models;
 using Microsoft.Extensions.Logging;
 
+using MailKit.Net.Smtp;
+using MimeKit;
+
 namespace EmployeeManagement.Controllers
 {
     public class AccountController : Controller
@@ -287,9 +290,51 @@ namespace EmployeeManagement.Controllers
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
-
             return View(model);
         }
+
+        [HttpPost]
+        public ActionResult<IEnumerable<bool>> SendEmail([FromBody] string confirmationLink)
+        {
+            try
+            {
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress("Alchematic", "alchematic@gmail.com"));
+                message.To.Add(new MailboxAddress("User", "mirzaadnanmustafa@yahoo.com"));
+                message.Subject = "Confirmation Link";
+                message.Body = new TextPart("plain")
+                {
+                    Text = confirmationLink
+                };
+
+                using (var client = new MailKit.Net.Smtp.SmtpClient())
+                {
+
+                    client.Connect("smtp.gmail.com", 587, false);
+
+                    //SMTP server authentication if needed
+                    client.Authenticate("xxxx@gmail.com", "xxxxx");
+
+                    client.Send(message);
+
+                    client.Disconnect(true);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return StatusCode(500, "Error occured");
+            }
+
+            return Ok(true);
+        }
+
+
+
+
+
+
 
         public async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
